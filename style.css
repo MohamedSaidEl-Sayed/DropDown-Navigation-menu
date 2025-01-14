@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+li{
+    list-style:none;
+    font-size: 20px;
+}
+body{
+    background-image: url('./images/sky.jpg');
+    background-position: center;
+    background-size:cover;
+    width:100%;
+    height: 100vh;
+}
+nav{
+    background-color: white;
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+}
+.container{
+    width:90%;
+    margin:auto;
+}
+.logo{
+    font-size: 30px;
+    line-height: 50px;
+}
+.main-list{
+    float:right;
+}
+.main-list>li{
+    display: inline-block;
+}
+.main-list li a{
+    display: block;
+    padding-inline: 20px;
+    line-height: 50px;
+}
+.main-list li a:hover{
+    background-color:steelblue;
+}
+.pages{
+    position: relative;
+}
+.pages-list{
+    display: none;
+    position: absolute;
+    width:180px;
+    background-color: white;
+}
+.pages-list li{
+    border-top:1px solid #ccc;
+}
+.main-list>.pages:hover .pages-list{
+    display: block;
+}
+.gallery{
+    position: relative;
+}
+.gallery-list{
+    display: none;
+    position: absolute;
+    width:180px;
+    background-color: white;
+}
+.gallery-list li{
+    border-top:1px solid #ccc;
+}
+.main-list>.gallery:hover .gallery-list{
+    display: block;
+}
+.pages-list .services{
+    position: relative;
+}
+.pages-list .services .services-list{
+    display: none;
+    position: absolute;
+    left:180px;
+    top:0;
+    background-color: white;
+    width:180px;
+}
+.pages-list .services:hover .services-list{
+    display: block;
+}
+label{
+    float:right;
+    font-size: 20px;
+    line-height: 50px;
+    display: none;
+}
+input{
+    display: none;
+}
+@media(max-width:868px){
+    label{
+        display: block;
+    }
+    .main-list{
+        display: none;
+    }
+    input:checked ~ .main-list{
+        display: block;
+    }
+    .main-list{
+        position: absolute;
+        top:100%;
+        background-color: white;
+        width:100%;
+        left:0;
+        right:0;
+        border-top:1px solid #ccc;
+    }
+    .main-list>li{
+        display:block;
+        /* border-top:1px solid #ccc; */
+    }
+    .pages-list{
+        position: relative;
+        width: 100%;
+        background-color: rgb(187, 187, 187);
+    }
+    .pages-list .services .services-list{
+        position: relative;
+        width: 100%;
+        background-color: rgb(187, 187, 187);
+        left:0;
+    }
+    .gallery-list{
+        position: relative;
+        width:100%;
+        background-color: rgb(187, 187, 187);
+    }
+    
+    
+}
